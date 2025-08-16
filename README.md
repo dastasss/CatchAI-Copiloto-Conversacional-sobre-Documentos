@@ -108,7 +108,7 @@ La aplicación sigue una arquitectura de **monolito contenedorizado** para simpl
 
 ## 💬 Explicación del Flujo Conversacional
 
-1.  **Carga de Documentos:** El usuario sube archivos PDF a través de la interfaz de Streamlit.
+1.  **Carga de Documentos:** El usuario sube archivos PDF a través de la interfaz de Streamlit. Al hacer clic en "Procesar Documentos", la aplicación valida la cantidad de archivos; si se excede el límite, se mostrará una advertencia. Si la carga es válida, el sistema guarda temporalmente los PDFs
 2.  **Procesamiento:** Al hacer clic en "Procesar Documentos", la aplicación:
     *   Guarda temporalmente los PDFs en el volumen `data/uploaded_pdfs`.
     *   Carga el contenido de los PDFs.
