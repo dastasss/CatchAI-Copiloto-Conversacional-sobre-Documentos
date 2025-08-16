@@ -1,0 +1,6 @@
+streamlit
+langchain==0.1.0
+chromadb
+pypdf
+sentence-transformers
+langchain_community==0.0.16
