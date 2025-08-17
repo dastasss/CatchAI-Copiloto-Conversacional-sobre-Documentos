@@ -22,7 +22,7 @@ Antes de continuar, asegúrate de tener instalado lo siguiente en tu sistema:
 
 1.  **Clonar el Repositorio:**
     ```bash
-    git clone https://github.com/dastasss/CatchAI-Copiloto-Conversacional-sobre-Documentos..git
+    git clone https://github.com/dastasss/CatchAI-Copiloto-Conversacional-sobre-Documentos.git
     
     ```
     
