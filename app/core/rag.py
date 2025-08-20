@@ -48,7 +48,8 @@ def get_rag_chain(vectorstore):
     """
     Creates a conversational retrieval chain with memory.
     """
-    llm = Ollama(model="llama3.2", base_url="http://host.docker.internal:11434")
+    ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://host.docker.internal:11434")
+    llm = Ollama(model="llama3.2", base_url=ollama_base_url)
 
     # Use a memory buffer to hold conversation history
     memory = ConversationBufferMemory(
@@ -76,7 +77,8 @@ def summarize_documents(vectorstore):
     """
     Generates a concise summary for each document in the vectorstore.
     """
-    llm = Ollama(model="llama3.2", base_url="http://host.docker.internal:11434")
+    ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://host.docker.internal:11434")
+    llm = Ollama(model="llama3.2", base_url=ollama_base_url)
     
     chroma_client = vectorstore._client
     collection_name = vectorstore._collection.name
